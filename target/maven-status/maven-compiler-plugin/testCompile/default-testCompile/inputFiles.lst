@@ -1,0 +1,7 @@
+/Users/naveenrajk/Documents/serenity-chromeextension/src/test/java/saka/cucumberTestSuite.java
+/Users/naveenrajk/Documents/serenity-chromeextension/src/test/java/saka/ChromeDriverWithExtension.java
+/Users/naveenrajk/Documents/serenity-chromeextension/src/test/java/saka/navigation/homePage.java
+/Users/naveenrajk/Documents/serenity-chromeextension/src/test/java/saka/navigation/navigateTo.java
+/Users/naveenrajk/Documents/serenity-chromeextension/src/test/java/saka/stepDefinitions/browserStepDefinitions.java
+/Users/naveenrajk/Documents/serenity-chromeextension/src/test/java/saka/stepDefinitions/envConfigurationStepDefinitions.java
+/Users/naveenrajk/Documents/serenity-chromeextension/src/test/java/saka/sharedFlows/envConfigurationSteps.java
