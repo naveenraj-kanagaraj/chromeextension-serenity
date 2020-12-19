@@ -22,7 +22,5 @@ jobs:
         java-version: 1.8
     - name: setup-chromedriver
       uses: nanasess/setup-chromedriver@master
-      with:
-        chromedriver-version: '77.0.3865.40'
     - name: Build with Maven
       run: mvn clean verify -Denvironment=staging -Dtags=@defaultMode --file pom.xml
