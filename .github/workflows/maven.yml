@@ -23,6 +23,6 @@ jobs:
     - name: setup-chromedriver
       uses: nanasess/setup-chromedriver@master
       with:
-        chromedriver-version: "86.0.4240.22"
+        chromedriver-version: '86.0.4240.22'
     - name: Build with Maven
       run: mvn clean verify -Denvironment=staging -Dtags=@defaultMode --file pom.xml
