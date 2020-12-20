@@ -21,7 +21,7 @@ jobs:
       with:
         java-version: 1.8    
     - name: install zip 
-      run: apt-get install zip unzip -qy
+      run: sudo apt-get install zip unzip -qy
     - name: setup-chromedriver
       uses: nanasess/setup-chromedriver@master
     - name: unzip chromedriver
