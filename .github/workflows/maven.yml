@@ -23,7 +23,7 @@ jobs:
     - name: setup-chromedriver
       uses: nanasess/setup-chromedriver@master
     - name: unzip chromedriver
-      run: unzip chromedriver_linux64.zip && \
+      run: cd /usr/local && \ unzip chromedriver_linux64.zip && \
            chown root:root /usr/bin/chromedriver && \
            chmod +x /usr/bin/chromedriver
     - name: install google chrome
