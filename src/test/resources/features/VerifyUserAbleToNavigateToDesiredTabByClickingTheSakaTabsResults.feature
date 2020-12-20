@@ -1,7 +1,7 @@
 @TabResults
 Feature: User Navigate From Saka TabsResults
 
-  Scenario: Verify User Able To Navigate To Desired Tab By Clikcing The Saka TabsResults
+  Scenario: Verify User Able To Navigate To Desired Tab By Clicking The Saka TabsResults
     Given open browser
     Given open new tab with "https://stackoverflow.com/" and store it in session variable "tab1"
     Given open new tab with "https://www.linkedin.com/" and store it in session variable "tab2"
