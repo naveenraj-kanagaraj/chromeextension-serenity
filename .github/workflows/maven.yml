@@ -52,6 +52,3 @@ jobs:
    
     - name: Build with Maven
       run: mvn clean install -DskipTests
-      
-    - name: Execute test sceanrio
-      run: mvn clean verify -Denvironment=staging -Dtags=@defaultMode --file pom.xml
