@@ -39,7 +39,7 @@ jobs:
       run: sudo chmod +x google-chrome && ./google-chrome
       
     - name: Replace serenity property
-      run: $sed '/chromedriver/ c webdriver.chrome.driver=/usr/local/bin/chromedriver/' src/test/resources/serenity.properties
-       
+      run: sed '/webdriver/ c webdriver.chrome.driver=/usr/local/bin/chromedriver/' /home/runner/work/chromeextension-serenity/chromeextension-serenity/src/test/resources/serenity.properties 
+   
     - name: Build with Maven
       run: mvn clean verify -Denvironment=staging -Dtags=@defaultMode --file pom.xml
