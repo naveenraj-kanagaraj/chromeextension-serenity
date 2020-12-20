@@ -22,11 +22,13 @@ jobs:
         java-version: 1.8
     - name: setup-chromedriver
       uses: nanasess/setup-chromedriver@master
+    - name: unzip chromedriver
+      run: unzip chromedriver_linux64.zip && \
+           chown root:root /usr/bin/chromedriver && \
+           chmod +x /usr/bin/chromedriver
     - name: install google chrome
       run: wget -q https://script.install.devinsideyou.com/google-chrome
     - name: change permission to google chrome
       run: sudo chmod +x google-chrome && ./google-chrome
-    - name: Replace serenity property
-      run: sed '/webdriver/ c webdriver.chrome.driver=/usr/local/bin/chromedriver/' /home/runner/work/chromeextension-serenity/chromeextension-serenity/src/test/resources/serenity.properties 
     - name: Build with Maven
       run: mvn clean verify -Denvironment=staging -Dtags=@defaultMode --file pom.xml
