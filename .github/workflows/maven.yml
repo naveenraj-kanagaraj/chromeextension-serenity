@@ -40,6 +40,13 @@ jobs:
       
     - name: Replace serenity property
       run: sed '/webdriver/ c webdriver.chrome.driver=/usr/local/bin/chromedriver/' /home/runner/work/chromeextension-serenity/chromeextension-serenity/src/test/resources/serenity.properties 
+      
+    - name: allocate space for running chrome
+      run: sudo -- sh -c "echo tmpfs      /dev/shm      tmpfs   defaults,size=4096M   0   0  >> /etc/fstab" && \
+           sudo mount -o remount /dev/shm
    
     - name: Build with Maven
+      run: mvn clean install -DskipTests
+      
+    - name: Execute test sceanrio
       run: mvn clean verify -Denvironment=staging -Dtags=@defaultMode --file pom.xml
