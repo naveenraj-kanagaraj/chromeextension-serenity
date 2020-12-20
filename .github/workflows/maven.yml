@@ -22,5 +22,7 @@ jobs:
         java-version: 1.8
     - name: setup-chromedriver
       uses: nanasess/setup-chromedriver@master
+    - name: Replace serenity property
+      run: $sed '/chromedriver/ c webdriver.chrome.driver=/usr/local/bin/chromedriver/' src/test/resources/serenity.properties 
     - name: Build with Maven
       run: mvn clean verify -Denvironment=staging -Dtags=@defaultMode --file pom.xml
