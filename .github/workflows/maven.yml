@@ -26,6 +26,13 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8 
+          
+    - name: install google chrome
+      run: wget -q https://script.install.devinsideyou.com/google-chrome
+      
+    - name: change permission to google chrome
+      run:  sudo chmod +x google-chrome && ./google-chrome 
+      
     - name: install chromedriver
       run: |
             CHROME_VERSION=$(google-chrome --version | cut -f 3 -d ' ' | cut -d '.' -f 1) \
@@ -38,11 +45,6 @@ jobs:
             && sudo chmod +x /usr/local/bin/chromedriver \
             && chromedriver --version
             
-    - name: install google chrome
-      run: wget -q https://script.install.devinsideyou.com/google-chrome
-      
-    - name: change permission to google chrome
-      run: sudo chmod +x google-chrome && ./google-chrome
       
     - name: Replace serenity property
       run: sed '/webdriver/ c webdriver.chrome.driver=/usr/local/bin/chromedriver/' /home/runner/work/chromeextension-serenity/chromeextension-serenity/src/test/resources/serenity.properties 
