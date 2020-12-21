@@ -19,3 +19,6 @@ To Execute Saka modify Default mode cases
 Reports Path
     
      target/site/serenity/index.html 
+     
+     
+![Cucumber Feature File Validation](https://github.com/freshmarketer/freshmarketer-serenity/workflows/Cucumber%20Feature%20File%20Validation/badge.svg)
